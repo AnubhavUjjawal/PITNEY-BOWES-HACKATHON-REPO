@@ -20,7 +20,7 @@ services = {
   'cache_expires': 10,
 
   # most global settings can be overridden at resource level
-  'resource_methods': ['GET', 'POST', 'PATCH'],
+  'resource_methods': ['GET', 'POST'],
 
   'schema': service.service_schema
 }
@@ -37,7 +37,7 @@ plans = {
   'cache_expires': 10,
 
   # most global settings can be overridden at resource level
-  'resource_methods': ['GET', 'POST', 'PATCH'],
+  'resource_methods': ['GET', 'POST'],
 
   'schema': plans.plan_schema
 }
@@ -54,7 +54,7 @@ shippings = {
   'cache_expires': 10,
 
   # most global settings can be overridden at resource level
-  'resource_methods': ['GET', 'POST', 'PATCH'],
+  'resource_methods': ['GET', 'POST'],
 
   'schema': shipping.shipping_schema
 }
