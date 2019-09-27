@@ -1,19 +1,12 @@
+import os
+from os.path import join, dirname
 from schemas import service, plans, shipping
-# Let's just use the local mongod instance. Edit as needed.
+from dotenv import load_dotenv
 
-# Please note that MONGO_HOST and MONGO_PORT could very well be left
-# out as they already default to a bare bones local 'mongod' instance.
-MONGO_HOST = 'localhost'
-MONGO_PORT = 27017
+dotenv_path = join(dirname(__file__), '.env')
+load_dotenv(dotenv_path)
 
-# # Skip this block if your db has no auth. But it really should.
-# MONGO_USERNAME = '<your username>'
-# MONGO_PASSWORD = '<your password>'
-# # Name of the database on which the user can be authenticated,
-# # needed if --auth mode is enabled.
-# MONGO_AUTH_SOURCE = '<dbname>'
-
-MONGO_DBNAME = 'pitney-bowes'
+MONGO_URI = os.getenv('MONGO_URI')
 
 services = {
   'item_title': 'service',
