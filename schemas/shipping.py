@@ -57,5 +57,14 @@ shipping_schema = {
   },
   'status': {
     'type': 'string',
+  },
+  'payment': {
+    'type': 'float'
+  },
+  'payment_type': {
+    'type': 'string'
+  },
+  'payment_status': {
+    'type': 'boolean'
   }
 }
