@@ -2,7 +2,6 @@ service_schema = {
   'name': {
     'type': 'string',
     'required': True,
-    'unique': True
   },
   'id': {
     'type': 'string',
@@ -15,7 +14,6 @@ service_schema = {
   'img': {
     'type': 'string',
     'required': True,
-    'unique': True
   },
   'plans': {
     'type': 'list',

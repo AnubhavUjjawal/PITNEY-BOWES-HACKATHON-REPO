@@ -6,7 +6,8 @@ from dotenv import load_dotenv
 dotenv_path = join(dirname(__file__), '.env')
 load_dotenv(dotenv_path)
 
-MONGO_URI = os.getenv('MONGO_URI')
+# MONGO_URI = os.environ['MONGO_URI']
+MONGO_URI = 'mongodb+srv://admin:qazwsxedc@pitney-bowes-wgqbw.gcp.mongodb.net/test?retryWrites=true&w=majority'
 
 services = {
   'item_title': 'service',
@@ -58,5 +59,7 @@ shippings = {
 
   'schema': shipping.shipping_schema
 }
+
+DATE_FORMAT = "%d-%m-%Y"
 
 DOMAIN = {'services': services, 'plans': plans, 'shipping': shippings}

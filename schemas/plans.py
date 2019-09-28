@@ -15,11 +15,9 @@ plan_schema = {
   'recurring_payment': {
     'type': 'boolean',
     'required': True,
-    'unique': True
   },
   'recurring_span': {
     'type': 'string',
     'required': True,
-    'unique': True
   }
 }
