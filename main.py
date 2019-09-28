@@ -37,7 +37,7 @@ def  handle_dialoglow():
   if x == 'Order':
     o_no = int(request.json['queryResult']['parameters']['OrderNumber'])
     shipping_order = client.test['shipping'].find_one({'id': o_no})
-    print(shipping_order)
+    # print(shipping_order)
   res_string = f'Your Order with id {shipping_order["id"]} shipped to {shipping_order["to_street"]}, {shipping_order["to_city"]}, {shipping_order["to_state"]} scheduled to be delivered on {shipping_order["delivery_date"].strftime("%d %B %Y")}'
   res = copy.deepcopy(fullfillment_res)
   res['payload']['google']['richResponse']['items'][0]['simpleResponse']['textToSpeech'] = res_string
