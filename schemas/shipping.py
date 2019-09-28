@@ -54,5 +54,8 @@ shipping_schema = {
   'delivery_date': {
     'type': 'datetime',
     'required': True,
+  },
+  'status': {
+    'type': 'string',
   }
 }
