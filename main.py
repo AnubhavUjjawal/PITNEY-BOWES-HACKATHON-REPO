@@ -4,12 +4,13 @@ import pprint
 import copy
 from eve import Eve
 from flask import Flask, escape, request
-
+from flask_cors import CORS
 from pymongo import MongoClient
 
 
 client = MongoClient('mongodb+srv://admin:qazwsxedc@pitney-bowes-wgqbw.gcp.mongodb.net/test?retryWrites=true&w=majority')
 app = Eve()
+CORS(app)
 
 fullfillment_res = {
       "fulfillmentText": "This is a text response",
